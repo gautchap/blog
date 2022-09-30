@@ -24,6 +24,10 @@ class Router
                 $article = new ArticleController;
                 $article->show();
                 break;
+            case str_contains($path, "/edit?id="):
+                $article = new ArticleController;
+                $article->edit();
+                break;
         }
     }
 }
